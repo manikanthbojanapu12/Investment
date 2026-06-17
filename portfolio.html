@@ -1,0 +1,197 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Explore Stackly's diverse investment portfolio, showcasing strategic asset allocation and performance across various markets.">
+  <title>Stackly | Investment Portfolio</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="loader"><div class="spinner-border text-primary" role="status" aria-label="Loading"></div></div>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img class="site-logo" src="assets/stackly-whitish_blue-logo.webp" alt="Stackly logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation"><span class="navbar-toggler-icon"></span></button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-lg-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="about.html" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="services.html" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="portfolio.html" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="pricing.html" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="contact.html" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-outline-primary" data-page="login.html" href="login.html">Login</a>
+          <a class="btn btn-outline-primary" data-page="signup.html" href="signup.html">Sign Up</a>
+          <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode"></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="page-hero page-hero--split">
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 reveal hero-copy">
+          <h1>Portfolio</h1>
+          <p class="lead">A curated selection of our investment strategies and their performance across diverse asset classes.</p>
+        </div>
+        <div class="col-lg-6 reveal">
+          <div class="hero-visual">
+            <img src="assets/hero_visuals.webp" alt="Financial charts and investment data on a screen" loading="eager" fetchpriority="high">
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-soft pb-0">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-lg-3 reveal">
+            <div class="glass-card p-4 h-100">
+              <div class="stat-number text-primary" data-count="138">0+</div>
+              <p class="mb-0 muted">Organic growth lift</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 reveal">
+            <div class="glass-card p-4 h-100">
+              <div class="stat-number text-primary" data-count="46">0+</div>
+              <p class="mb-0 muted">Clinic locations optimized</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 reveal">
+            <div class="glass-card p-4 h-100">
+              <div class="stat-number text-primary" data-count="94">0+</div>
+              <p class="mb-0 muted">Client retention</p>
+            </div>
+          </div>
+          <div class="col-6 col-lg-3 reveal">
+            <div class="glass-card p-4 h-100">
+              <div class="stat-number text-primary" data-count="1000">0+</div>
+              <p class="mb-0 muted">Campaigns launched</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Filter by Category</h2>
+          <p>Use the filters below to explore work by channel and service type.</p>
+        </div>
+        <div class="d-flex flex-wrap justify-content-center gap-2 mb-5 reveal">
+          <button class="btn btn-outline-primary filter-btn active" data-filter="all">All</button>
+          <button class="btn btn-outline-primary filter-btn" data-filter="seo">SEO</button>
+          <button class="btn btn-outline-primary filter-btn" data-filter="marketing">Marketing</button>
+          <button class="btn btn-outline-primary filter-btn" data-filter="design">Design</button>
+          <button class="btn btn-outline-primary filter-btn" data-filter="development">Development</button>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4 reveal" data-category="seo"><div class="project-card"><img src="assets/seo.webp" alt="SEO dashboard"><span class="badge text-bg-primary mb-2">SEO</span><h2 class="h5">BrightCart Organic Lift</h2><p class="muted">Client: BrightCart</p><p>Technical SEO and content clusters that increased non-brand traffic by 138%.</p><a class="btn btn-outline-primary" href="404.html">View Details</a></div></div>
+          <div class="col-md-6 col-xl-4 reveal" data-category="marketing"><div class="project-card"><img src="assets/marketing.webp" alt="Campaign planning"><span class="badge text-bg-primary mb-2">Marketing</span><h2 class="h5">FinEdge Launch Campaign</h2><p class="muted">Client: FinEdge</p><p>Paid search and social acquisition campaign for a fintech product launch.</p><a class="btn btn-outline-primary" href="404.html">View Details</a></div></div>
+          <div class="col-md-6 col-xl-4 reveal" data-category="design"><div class="project-card"><img src="assets/design.webp" alt="Brand design desk"><span class="badge text-bg-primary mb-2">Design</span><h2 class="h5">Northstar Brand Refresh</h2><p class="muted">Client: Northstar Labs</p><p>Visual identity, messaging, and launch assets for a B2B software firm.</p><a class="btn btn-outline-primary" href="404.html">View Details</a></div></div>
+          <div class="col-md-6 col-xl-4 reveal" data-category="development"><div class="project-card"><img src="assets/development.webp" alt="Web development laptop"><span class="badge text-bg-primary mb-2">Development</span><h2 class="h5">CloudNest Website</h2><p class="muted">Client: CloudNest</p><p>Responsive website, tracking architecture, and conversion landing pages.</p><a class="btn btn-outline-primary" href="404.html">View Details</a></div></div>
+          <div class="col-md-6 col-xl-4 reveal" data-category="seo"><div class="project-card"><img src="assets/measurement.webp" alt="Analytics charts"><span class="badge text-bg-primary mb-2">SEO</span><h2 class="h5">Mediva Search Expansion</h2><p class="muted">Client: Mediva Care</p><p>Local SEO improvements across 46 clinic locations.</p><a class="btn btn-outline-primary" href="404.html">View Details</a></div></div>
+          <div class="col-md-6 col-xl-4 reveal" data-category="marketing"><div class="project-card"><img src="assets/growth%20strategy.webp" alt="Team marketing meeting"><span class="badge text-bg-primary mb-2">Marketing</span><h2 class="h5">UrbanPeak Retention</h2><p class="muted">Client: UrbanPeak</p><p>Email, SMS, and retargeting flows that improved repeat revenue.</p><a class="btn btn-outline-primary" href="404.html">View Details</a></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Featured Results</h2>
+          <p>These examples show how strategy, execution, and reporting work together.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-lg-4 reveal">
+            <div class="service-card">
+              <h3 class="h5">Conversion Optimization</h3>
+              <p class="muted">Landing page refinements and paid traffic restructuring improved lead quality without increasing spend.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 reveal">
+            <div class="service-card">
+              <h3 class="h5">Brand Trust</h3>
+              <p class="muted">Messaging updates and design consistency made campaigns feel more premium and credible.</p>
+            </div>
+          </div>
+          <div class="col-lg-4 reveal">
+            <div class="service-card">
+              <h3 class="h5">Retention Engines</h3>
+              <p class="muted">Lifecycle email and remarketing campaigns created more repeat opportunities from existing customers.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand mb-3">
+            <img class="site-logo" src="assets/stackly-whitish_blue-logo.webp" alt="Stackly logo">
+          </div>
+          <p class="mb-4">Institutional-grade asset management and wealth planning for families and ambitious firms.</p>
+          <div class="d-flex gap-2">
+            <a class="social-link" href="404.html" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a class="social-link" href="404.html" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a class="social-link" href="404.html" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a class="social-link" href="404.html" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <h3 class="h6 text-uppercase text-white-50">Quick Links</h3>
+          <ul class="list-unstyled d-grid gap-2 mb-0">
+            <li><a href="index.html">Home</a></li>
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <h3 class="h6 text-uppercase text-white-50">Services</h3>
+          <ul class="list-unstyled d-grid gap-2 mb-0">
+            <li><a href="services.html">Equities</a></li>
+            <li><a href="services.html">Fixed Income</a></li>
+            <li><a href="services.html">Alternatives</a></li>
+            <li><a href="services.html">Estate Planning</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3 class="h6 text-uppercase text-white-50">Stay Updated</h3>
+          <form class="footer-newsletter">
+            <div class="input-group">
+              <input class="form-control" type="email" placeholder="Enter your email address">
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+          <div class="mt-4">
+            <p class="mb-1"><i class="bi bi-geo-alt me-2 text-info"></i>42 Stackly Avenue, New York, NY 10001</p>
+            <p class="mb-1"><i class="bi bi-envelope me-2 text-info"></i>hello@stackly.example</p>
+            <p class="mb-0"><i class="bi bi-telephone me-2 text-info"></i>+1 212 555 0188</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom mt-5 pt-3 pb-2 d-flex flex-wrap justify-content-between gap-3 align-items-center">
+        <span>Copyright &copy; <span data-year></span> Stackly</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>

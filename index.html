@@ -1,0 +1,297 @@
+<!doctype html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="description" content="Stackly is a premier asset management firm providing strategic investment solutions, portfolio diversification, and wealth growth.">
+  <title>Stackly | Wealth & Investment Management</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.css" rel="stylesheet">
+  <link rel="stylesheet" href="assets/css/style.css">
+</head>
+<body>
+  <div class="loader"><div class="spinner-border text-primary" role="status" aria-label="Loading"></div></div>
+  <nav class="navbar navbar-expand-lg fixed-top">
+    <div class="container">
+      <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <img class="site-logo" src="assets/stackly-whitish_blue-logo.webp" alt="Stackly logo">
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#mainNav" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="mainNav">
+        <ul class="navbar-nav mx-lg-auto align-items-lg-center">
+          <li class="nav-item"><a class="nav-link" data-page="index.html" href="index.html">Home</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="about.html" href="about.html">About</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="services.html" href="services.html">Services</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="portfolio.html" href="portfolio.html">Portfolio</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="pricing.html" href="pricing.html">Pricing</a></li>
+          <li class="nav-item"><a class="nav-link" data-page="contact.html" href="contact.html">Contact</a></li>
+        </ul>
+        <div class="nav-actions">
+          <a class="btn btn-outline-primary" data-page="login.html" href="login.html">Login</a>
+          <a class="btn btn-outline-primary" data-page="signup.html" href="signup.html">Sign Up</a>
+          <button class="theme-toggle" data-theme-toggle aria-label="Toggle dark mode"></button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <header class="hero hero-home">
+    <div class="hero-orb hero-orb-one"></div>
+    <div class="hero-orb hero-orb-two"></div>
+    <div class="hero-grid"></div>
+    <div class="container">
+      <div class="row align-items-center g-5">
+        <div class="col-lg-6 hero-copy reveal">
+          <span class="badge text-bg-light text-primary mb-3">Strategic Asset Management</span>
+          <h1>Secure your future with precision-engineered wealth strategies</h1>
+          <p class="my-4">We provide institutional-grade portfolio management, algorithmic trading insights, and diversified investment vehicles designed for long-term capital preservation.</p>
+          <div class="d-flex flex-wrap gap-3">
+            <a class="btn btn-primary btn-lg" href="404.html">Open an Account</a>
+            <a class="btn btn-outline-light btn-lg" href="404.html">View Performance</a>
+          </div>
+          <div class="hero-metrics mt-5">
+            <div class="hero-metric">
+              <strong>$1.2B</strong>
+              <span>Assets Managed</span>
+            </div>
+            <div class="hero-metric">
+              <strong>12.4%</strong>
+              <span>Avg. Annual Return</span>
+            </div>
+            <div class="hero-metric">
+              <strong>24/7</strong>
+              <span>Market Monitoring</span>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6 reveal" data-hero-swiper>
+          <div class="hero-stage">
+            <div class="hero-stage-glow"></div>
+            <div class="hero-stage-frame">
+              <article class="hero-slide is-active">
+                <span class="slide-kicker">Equity Markets</span>
+                <h2 class="h3">Global Equities and Index Performance.</h2>
+                <p>Data-driven stock selection and sector-specific rotation strategies that outperform traditional benchmarks.</p>
+                <div class="slide-stats">
+                  <div><strong>+18.2%</strong><span>YTD Growth</span></div>
+                  <div><strong>AA+</strong><span>Portfolio Rating</span></div>
+                </div>
+              </article>
+              <article class="hero-slide">
+                <span class="slide-kicker">Fixed Income</span>
+                <h2 class="h3">Preserve capital with high-yield bonds.</h2>
+                <p>Strategic allocation in corporate and sovereign debt to ensure consistent cash flow and risk mitigation.</p>
+                <div class="slide-stats">
+                  <div><strong>5.8%</strong><span>Yield to Maturity</span></div>
+                  <div><strong>Zero</strong><span>Default Record</span></div>
+                </div>
+              </article>
+              <article class="hero-slide">
+                <span class="slide-kicker">Alternatives</span>
+                <h2 class="h3">Diversify into Real Estate and VC.</h2>
+                <p>Access exclusive private equity rounds and commercial real estate trusts previously reserved for institutions.</p>
+                <div class="slide-stats">
+                  <div><strong>24%</strong><span>Internal Rate of Return</span></div>
+                  <div><strong>Global</strong><span>Asset Reach</span></div>
+                </div>
+              </article>
+              <div class="hero-float-card">
+                <span class="float-label">Market Pulse</span>
+                <strong>Portfolio Alpha is currently +4.2% vs S&P 500</strong>
+                <div class="float-bar"><span></span></div>
+              </div>
+            </div>
+            <div class="hero-swiper-controls">
+              <button type="button" class="hero-swiper-btn" data-hero-prev aria-label="Previous slide"><i class="bi bi-arrow-left"></i></button>
+              <div class="hero-swiper-dots" aria-label="Hero slide indicators">
+                <button type="button" class="is-active" data-hero-dot="0" aria-label="Go to slide 1"></button>
+                <button type="button" data-hero-dot="1" aria-label="Go to slide 2"></button>
+                <button type="button" data-hero-dot="2" aria-label="Go to slide 3"></button>
+              </div>
+              <button type="button" class="hero-swiper-btn" data-hero-next aria-label="Next slide"><i class="bi bi-arrow-right"></i></button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="section section-soft">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <div class="glass-card p-4 h-100 momentum-card">
+              <img src="assets/growth%20strategy.webp" alt="Team planning digital growth">
+              <div class="icon-box"><i class="bi bi-graph-up-arrow"></i></div>
+              <h2 class="h4">Capital Strategy</h2>
+              <p class="muted mb-0">Customized financial roadmaps aligned with your risk tolerance and long-term liquidity needs.</p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="glass-card p-4 h-100 momentum-card">
+              <img src="assets/creative_system.webp" alt="Creative team discussing campaign assets">
+              <div class="icon-box"><i class="bi bi-shield-lock"></i></div>
+              <h2 class="h4">Risk Management</h2>
+              <p class="muted mb-0">Advanced hedging techniques and stress-testing to protect your assets during market volatility.</p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="glass-card p-4 h-100 momentum-card">
+              <img src="assets/measurement.webp" alt="Analytics dashboard on screen">
+              <div class="icon-box"><i class="bi bi-bar-chart-line"></i></div>
+              <h2 class="h4">Live Analytics</h2>
+              <p class="muted mb-0">Real-time reporting dashboards that show exactly where your money is and how it's performing.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>Comprehensive Wealth Management</h2>
+          <p>A full suite of financial services designed to build and protect intergenerational wealth.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-6 col-xl-4 reveal"><div class="service-card"><div class="card-media"><img src="assets/seo.webp" alt="Equity research"></div><div class="icon-box"><i class="bi bi-bank"></i></div><h3 class="h5">Equity Research</h3><p class="muted">In-depth fundamental analysis and quantitative modeling to find hidden market value.</p></div></div>
+          <div class="col-md-6 col-xl-4 reveal"><div class="service-card"><div class="card-media"><img src="assets/marketing.webp" alt="Fixed income"></div><div class="icon-box"><i class="bi bi-cash-stack"></i></div><h3 class="h5">Fixed Income</h3><p class="muted">Optimized bond portfolios and treasury management for stable, predictable yields.</p></div></div>
+          <div class="col-md-6 col-xl-4 reveal"><div class="service-card"><div class="card-media"><img src="assets/measurement.webp" alt="Retirement planning"></div><div class="icon-box"><i class="bi bi-umbrella"></i></div><h3 class="h5">Retirement Planning</h3><p class="muted">Tax-efficient savings and withdrawal strategies to ensure your lifestyle after career.</p></div></div>
+          <div class="col-md-6 col-xl-4 reveal"><div class="service-card"><div class="card-media"><img src="assets/creative_system.webp" alt="Estate planning"></div><div class="icon-box"><i class="bi bi-house-heart"></i></div><h3 class="h5">Estate Management</h3><p class="muted">Comprehensive trusts and legacy planning to preserve wealth across generations.</p></div></div>
+          <div class="col-md-6 col-xl-4 reveal"><div class="service-card"><div class="card-media"><img src="assets/build.webp" alt="Real estate"></div><div class="icon-box"><i class="bi bi-buildings"></i></div><h3 class="h5">Real Estate Trusts</h3><p class="muted">Direct exposure to commercial and residential real estate assets without the management burden.</p></div></div>
+          <div class="col-md-6 col-xl-4 reveal"><div class="service-card"><div class="card-media"><img src="assets/development.webp" alt="Venture capital"></div><div class="icon-box"><i class="bi bi-rocket-takeoff"></i></div><h3 class="h5">Venture Capital</h3><p class="muted">Early-stage investment opportunities in high-growth technology and biotech firms.</p></div></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section stats-band">
+      <div class="container">
+        <div class="row g-4 text-center">
+          <div class="col-6 col-lg-3 reveal"><div class="stat-number" data-count="1200">0+</div><p>High-Net-Worth Clients</p></div>
+          <div class="col-6 col-lg-3 reveal"><div class="stat-number" data-count="150">0+</div><p>Global Portfolios</p></div>
+          <div class="col-6 col-lg-3 reveal"><div class="stat-number" data-count="25">0+</div><p>Certified Strategists</p></div>
+          <div class="col-6 col-lg-3 reveal"><div class="stat-number" data-count="20">0+</div><p>Years of Market Alpha</p></div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section section-soft">
+      <div class="container">
+        <div class="section-title reveal">
+          <h2>The Investor Lifecycle</h2>
+          <p>A structured approach to capital growth, from discovery to sustainable exit strategies.</p>
+        </div>
+        <div class="row g-4">
+          <div class="col-md-4 reveal">
+            <div class="service-card">
+              <div class="card-media"><img src="assets/discover.webp" alt="Discovery planning dashboard"></div>
+              <span class="badge text-bg-primary mb-3">01</span>
+              <h3 class="h5">Assessment</h3>
+              <p class="muted mb-0">We evaluate your current financial standing, net worth, and long-term lifestyle objectives.</p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="service-card">
+              <div class="card-media"><img src="assets/build.webp" alt="Build stage team workshop"></div>
+              <span class="badge text-bg-primary mb-3">02</span>
+              <h3 class="h5">Allocation</h3>
+              <p class="muted mb-0">We build a diversified portfolio across equities, debt, and alternative assets based on your profile.</p>
+            </div>
+          </div>
+          <div class="col-md-4 reveal">
+            <div class="service-card">
+              <div class="card-media"><img src="assets/scale.webp" alt="Scale stage analytics and growth charts"></div>
+              <span class="badge text-bg-primary mb-3">03</span>
+              <h3 class="h5">Compounding</h3>
+              <p class="muted mb-0">We continuously rebalance and reinvest dividends to maximize the power of compound interest.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="container">
+        <div class="section-title reveal"><h2>Investor Testimonials</h2><p>Transparent outcomes and relationship-driven wealth management.</p></div>
+        <div id="testimonialCarousel" class="carousel slide carousel-fade reveal" data-bs-ride="carousel" data-bs-interval="6000" data-bs-touch="true">
+          <div class="carousel-inner">
+            <div class="carousel-item active"><div class="testimonial glass-card text-center"><p class="fs-5">"Stackly managed our family trust transition with incredible professionalism. Our portfolio has seen consistent 10%+ growth."</p><strong>Priya Menon</strong><span class="d-block muted">Trustee, Menon Estates</span></div></div>
+            <div class="carousel-item"><div class="testimonial glass-card text-center"><p class="fs-5">"Their access to private equity rounds gave us an edge that traditional banks simply couldn't provide."</p><strong>James Carter</strong><span class="d-block muted">Retired Tech Founder</span></div></div>
+            <div class="carousel-item"><div class="testimonial glass-card text-center"><p class="fs-5">"The transparency of their reporting is unmatched. I can see my global asset performance at any time on my dashboard."</p><strong>Aisha Khan</strong><span class="d-block muted">Private Investor</span></div></div>
+          </div>
+          <button class="carousel-control-prev" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="prev" aria-label="Previous"><span class="carousel-control-prev-icon"></span></button>
+          <button class="carousel-control-next" type="button" data-bs-target="#testimonialCarousel" data-bs-slide="next" aria-label="Next"><span class="carousel-control-next-icon"></span></button>
+        </div>
+      </div>
+    </section>
+
+    <section class="section cta">
+      <div class="container text-center reveal">
+        <h2 class="display-6 fw-bold">Ready to grow your capital with confidence?</h2>
+        <p class="mb-4">Schedule a discovery call with a Senior Investment Strategist today.</p>
+        <a class="btn btn-primary btn-lg" href="404.html">Consult a Strategist</a>
+      </div>
+    </section>
+  </main>
+
+  <footer class="pt-5">
+    <div class="container">
+      <div class="row g-4">
+        <div class="col-lg-4">
+          <div class="footer-brand mb-3">
+            <img class="site-logo" src="assets/stackly-whitish_blue-logo.webp" alt="Stackly logo">
+          </div>
+          <p class="mb-4">Institutional-grade asset management and wealth planning for families and ambitious firms.</p>
+          <div class="d-flex gap-2">
+            <a class="social-link" href="404.html" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
+            <a class="social-link" href="404.html" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
+            <a class="social-link" href="404.html" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
+            <a class="social-link" href="404.html" aria-label="X"><i class="bi bi-twitter-x"></i></a>
+          </div>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <h3 class="h6 text-uppercase text-white-50">Quick Links</h3>
+          <ul class="list-unstyled d-grid gap-2 mb-0">
+            <li><a href="about.html">About</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="portfolio.html">Portfolio</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+        <div class="col-md-4 col-lg-2">
+          <h3 class="h6 text-uppercase text-white-50">Services</h3>
+          <ul class="list-unstyled d-grid gap-2 mb-0">
+            <li><a href="services.html">Equities</a></li>
+            <li><a href="services.html">Fixed Income</a></li>
+            <li><a href="services.html">Alternatives</a></li>
+            <li><a href="services.html">Estate Planning</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-4">
+          <h3 class="h6 text-uppercase text-white-50">Stay Updated</h3>
+          <form class="footer-newsletter">
+            <div class="input-group">
+              <input class="form-control" type="email" placeholder="Enter your email address">
+              <button class="btn btn-primary" type="submit">Subscribe</button>
+            </div>
+          </form>
+          <div class="mt-4">
+            <p class="mb-1"><i class="bi bi-geo-alt me-2 text-info"></i>42 Stackly Avenue, New York, NY 10001</p>
+            <p class="mb-1"><i class="bi bi-envelope me-2 text-info"></i>hello@stackly.example</p>
+            <p class="mb-0"><i class="bi bi-telephone me-2 text-info"></i>+1 212 555 0188</p>
+          </div>
+        </div>
+      </div>
+      <div class="footer-bottom mt-5 pt-3 pb-2 d-flex flex-wrap justify-content-between gap-3 align-items-center">
+        <span>Copyright &copy; <span data-year></span> Stackly</span>
+      </div>
+    </div>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="assets/js/main.js"></script>
+</body>
+</html>
