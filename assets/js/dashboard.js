@@ -5,6 +5,7 @@ document.addEventListener("DOMContentLoaded", () => {
   populateProfile(user);
   initLogout();
   initDashboardNavigation();
+  initSettingsPanel();
   window.addEventListener("resize", debounce(() => {
     if (getActivePanelName() === "dashboard") {
       drawCharts();
@@ -84,6 +85,17 @@ function initDashboardNavigation() {
   showPanel(initialPanel);
 }
 
+function initSettingsPanel() {
+  const settingsPanel = document.querySelector('[data-dashboard-panel="settings"]');
+  if (!settingsPanel) return;
+
+  settingsPanel.querySelectorAll(".btn").forEach((btn) => {
+    btn.addEventListener("click", () => {
+      location.href = "404.html";
+    });
+  });
+}
+
 function getRequestedPanel(links) {
   const hash = location.hash.replace("#", "");
   if (!hash) return null;
@@ -112,9 +124,10 @@ function drawCharts() {
 function setupCanvas(id) {
   const canvas = document.getElementById(id);
   if (!canvas) return null;
-  const rect = canvas.parentElement.getBoundingClientRect();
-  canvas.width = Math.max(rect.width, 300);
-  canvas.height = 280;
+  const parent = canvas.parentElement;
+  const rect = parent.getBoundingClientRect();
+  canvas.width = rect.width;
+  canvas.height = rect.height || 280;
   return { canvas, ctx: canvas.getContext("2d"), width: canvas.width, height: canvas.height };
 }
 
@@ -194,3 +207,46 @@ function roundedRect(ctx, x, y, width, height, radius) {
   ctx.closePath();
   ctx.fill();
 }
+/* ======================
+   MOBILE SIDEBAR
+====================== */
+
+document.addEventListener("DOMContentLoaded", () => {
+
+    const menuToggle = document.getElementById("menuToggle");
+    const sidebar = document.getElementById("sidebar");
+    const overlay = document.getElementById("sidebarOverlay");
+
+    if(menuToggle){
+
+        menuToggle.addEventListener("click", () => {
+
+            sidebar.classList.toggle("active");
+            overlay.classList.toggle("active");
+
+        });
+
+        overlay.addEventListener("click", () => {
+
+            sidebar.classList.remove("active");
+            overlay.classList.remove("active");
+
+        });
+
+        document.querySelectorAll("[data-dashboard-link]").forEach(link => {
+
+            link.addEventListener("click", () => {
+
+                if(window.innerWidth < 992){
+
+                    sidebar.classList.remove("active");
+                    overlay.classList.remove("active");
+
+                }
+
+            });
+
+        });
+    }
+
+});

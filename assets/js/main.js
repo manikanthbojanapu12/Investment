@@ -307,11 +307,7 @@ function initFooterInteractions() {
       }
 
       input.classList.remove("is-invalid");
-      message.textContent = "Subscribed successfully.";
-      message.classList.remove("text-warning");
-      message.classList.add("text-success");
-      showToast("Subscribed successfully.", "success");
-      form.reset();
+      location.href = "404.html";
     };
 
     form.addEventListener("submit", submitNewsletter);

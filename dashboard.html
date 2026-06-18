@@ -12,7 +12,10 @@
 <body>
   <div class="loader"><div class="spinner-border text-primary" role="status" aria-label="Loading"></div></div>
   <div class="dashboard-shell">
-    <aside class="sidebar">
+    <button class="menu-toggle" id="menuToggle">☰</button>
+
+    <div class="sidebar-overlay" id="sidebarOverlay"></div>
+    <aside class="sidebar" id="sidebar">
       <a class="navbar-brand d-flex align-items-center gap-2 mb-4 text-white" href="index.html">
         <img class="site-logo sidebar-logo" src="assets/stackly-whitish_blue-logo.webp" alt="Stackly logo">
       </a>
@@ -58,11 +61,7 @@
             <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">YTD Return</p><h2>+12.4%</h2></div></div>
           </section>
 
-          <section class="row g-4 mb-4">
-            <div class="col-lg-6"><div class="dashboard-card"><h2 class="h5">Portfolio Growth</h2><div class="chart-box"><canvas id="revenueChart" aria-label="Revenue chart"></canvas></div></div></div>
-            <div class="col-lg-6"><div class="dashboard-card"><h2 class="h5">Market Exposure</h2><div class="chart-box"><canvas id="trafficChart" aria-label="Traffic chart"></canvas></div></div></div>
-            <div class="col-12"><div class="dashboard-card"><h2 class="h5">Annual Alpha Tracking</h2><div class="chart-box"><canvas id="performanceChart" aria-label="Marketing performance chart"></canvas></div></div></div>
-          </section>
+         
 
           <section class="row g-4">
             <div class="col-xl-8">
