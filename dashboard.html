@@ -11,8 +11,10 @@
 </head>
 <body>
   <div class="loader"><div class="spinner-border text-primary" role="status" aria-label="Loading"></div></div>
-  <div class="dashboard-shell">
-    <button class="menu-toggle" id="menuToggle">☰</button>
+  <div class="dashboard-shell dashboard-redesign">
+    <button class="menu-toggle" id="menuToggle" type="button" aria-label="Open dashboard menu">
+      <i class="bi bi-list"></i>
+    </button>
 
     <div class="sidebar-overlay" id="sidebarOverlay"></div>
     <aside class="sidebar" id="sidebar">
@@ -34,13 +36,14 @@
     </aside>
 
     <main class="dashboard-main">
-      <div class="dashboard-topbar d-flex flex-wrap justify-content-between gap-3 align-items-center mb-4">
+      <div class="dashboard-topbar">
         <div>
-          <h1 class="h2 fw-bold mb-1">Dashboard</h1>
-          <p class="muted mb-0">Welcome back, <span data-user-name></span>.</p>
+          <span class="dashboard-kicker">Investor workspace</span>
+          <h1>Welcome back, <span data-user-name></span></h1>
+          <p class="muted mb-0">Track portfolio growth, documents, and account activity from one clean command center.</p>
         </div>
-        <div class="dashboard-userbar d-flex flex-wrap align-items-center gap-3">
-          <div class="dashboard-user-email text-end">
+        <div class="dashboard-userbar">
+          <div class="dashboard-user-email">
             <span class="d-block muted small text-uppercase letter-spacing">Logged in as</span>
             <strong class="d-block" data-user-email></strong>
           </div>
@@ -52,81 +55,111 @@
 
       <div class="dashboard-panel-stack">
         <section class="dashboard-panel is-active" data-dashboard-panel="dashboard">
-          <section class="row g-4 mb-4">
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Total Return</p><h2>+18.4%</h2><p class="mb-0 text-success">YTD</p></div></div>
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Volatility</p><h2>12.3%</h2><p class="mb-0 text-danger">Higher than avg.</p></div></div>
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Sharpe Ratio</p><h2>1.5</h2><p class="mb-0 text-success">Excellent</p></div></div>
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Alpha</p><h2>+2.1%</h2><p class="mb-0 text-success">vs Benchmark</p></div></div>
-          </section>
-         
-          <section class="row g-4">
-            <div class="col-xl-8">
-              
-            <div class="col-xl-4">
-              <div class="dashboard-card h-100">
-                <h2 class="h5 mb-3">User Profile</h2>
-                <p class="mb-2"><strong>Name:</strong> <span data-user-name></span></p>
-                <p class="mb-2"><strong>Email:</strong> <span data-user-email></span></p>
-                <p class="mb-0"><strong>Role:</strong> <span data-user-role></span></p>
+          <section class="dashboard-hero-card">
+            <div class="dashboard-hero-copy">
+              <span class="dashboard-kicker">Portfolio value</span>
+              <h2>$482,940</h2>
+              <p>Balanced exposure across public markets, fixed income, real estate, and venture opportunities.</p>
+              <div class="dashboard-hero-actions">
+                <a class="btn btn-primary" href="#" data-dashboard-link="analytics"><i class="bi bi-bar-chart"></i> View Performance</a>
+                <a class="btn btn-outline-primary" href="#" data-dashboard-link="reports"><i class="bi bi-file-earmark-text"></i> Statements</a>
               </div>
+            </div>
+            <div class="dashboard-hero-visual">
+              <img src="assets/growth%20strategy.webp" alt="Investment strategy dashboard">
+            </div>
+          </section>
+
+          <section class="dashboard-metric-grid">
+            <div class="dashboard-card metric-card"><span>Total Return</span><strong>+18.4%</strong><small class="text-success">YTD growth</small></div>
+            <div class="dashboard-card metric-card"><span>Volatility</span><strong>12.3%</strong><small class="text-danger">Above target</small></div>
+            <div class="dashboard-card metric-card"><span>Sharpe Ratio</span><strong>1.5</strong><small class="text-success">Strong risk reward</small></div>
+            <div class="dashboard-card metric-card"><span>Alpha</span><strong>+2.1%</strong><small class="text-success">vs benchmark</small></div>
+          </section>
+
+          <section class="dashboard-content-grid">
+            <div class="dashboard-card dashboard-chart-card">
+              <div class="dashboard-card-header">
+                <div>
+                  <span class="dashboard-kicker">Six month trend</span>
+                  <h2 class="h5 mb-0">Portfolio Performance</h2>
+                </div>
+                <span class="badge text-bg-success">Live</span>
+              </div>
+              <div class="chart-box"><canvas id="revenueChart" aria-label="Portfolio performance chart"></canvas></div>
+            </div>
+            <div class="dashboard-card image-insight-card">
+              <img src="assets/design.webp" alt="Portfolio allocation planning">
+              <div>
+                <span class="dashboard-kicker">Design allocation</span>
+                <h2 class="h5">Model Portfolio</h2>
+                <p class="muted">A refined asset mix keeps long-term goals, risk tolerance, and liquidity needs aligned.</p>
+              </div>
+            </div>
+            <div class="dashboard-card image-insight-card">
+              <img src="assets/development.webp" alt="Growth development analysis">
+              <div>
+                <span class="dashboard-kicker">Development pipeline</span>
+                <h2 class="h5">Opportunity Watchlist</h2>
+                <p class="muted">Private market and venture themes are reviewed before moving into active allocation.</p>
+              </div>
+            </div>
+            <div class="dashboard-card profile-summary-card">
+              <h2 class="h5 mb-3">User Profile</h2>
+              <p><strong>Name:</strong> <span data-user-name></span></p>
+              <p><strong>Email:</strong> <span data-user-email></span></p>
+              <p class="mb-0"><strong>Role:</strong> <span data-user-role></span></p>
             </div>
           </section>
         </section>
 
         <section class="dashboard-panel" data-dashboard-panel="analytics" hidden>
-         <section class="row g-4 mb-4">
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Total Return</p><h2>+18.4%</h2><p class="mb-0 text-success">YTD</p></div></div>
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Volatility</p><h2>12.3%</h2><p class="mb-0 text-danger">Higher than avg.</p></div></div>
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Sharpe Ratio</p><h2>1.5</h2><p class="mb-0 text-success">Excellent</p></div></div>
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Alpha</p><h2>+2.1%</h2><p class="mb-0 text-success">vs Benchmark</p></div></div>
+          <section class="dashboard-metric-grid">
+            <div class="dashboard-card metric-card"><span>Total Return</span><strong>+18.4%</strong><small class="text-success">YTD</small></div>
+            <div class="dashboard-card metric-card"><span>Equities</span><strong>45%</strong><small>Largest allocation</small></div>
+            <div class="dashboard-card metric-card"><span>Income Yield</span><strong>6.8%</strong><small class="text-success">Annualized</small></div>
+            <div class="dashboard-card metric-card"><span>Cash Buffer</span><strong>5%</strong><small>Available liquidity</small></div>
           </section>
-
-          <section class="row g-4">
-            <div class="col-lg-7">
-              <div class="dashboard-card h-100">
-                <h2 class="h5 mb-3">Asset Allocation</h2>
-                <div class="d-grid gap-3">
-                  <div class="d-flex justify-content-between"><span>Equities</span><strong>45%</strong></div>
-                  <div class="d-flex justify-content-between"><span>Fixed Income</span><strong>30%</strong></div>
-                  <div class="d-flex justify-content-between"><span>Real Estate</span><strong>15%</strong></div>
-                  <div class="d-flex justify-content-between"><span>Commodities</span><strong>5%</strong></div>
-                  <div class="d-flex justify-content-between"><span>Cash</span><strong>5%</strong></div>
-                </div>
+          <section class="dashboard-content-grid dashboard-two-column">
+            <div class="dashboard-card dashboard-chart-card">
+              <div class="dashboard-card-header"><h2 class="h5 mb-0">Risk-Adjusted Trend</h2></div>
+              <div class="chart-box"><canvas id="trafficChart" aria-label="Risk-adjusted performance chart"></canvas></div>
+            </div>
+            <div class="dashboard-card">
+              <h2 class="h5 mb-3">Asset Allocation</h2>
+              <div class="allocation-list">
+                <div><span>Equities</span><strong>45%</strong></div>
+                <div><span>Fixed Income</span><strong>30%</strong></div>
+                <div><span>Real Estate</span><strong>15%</strong></div>
+                <div><span>Commodities</span><strong>5%</strong></div>
+                <div><span>Cash</span><strong>5%</strong></div>
               </div>
             </div>
-            <div class="col-lg-5">
-              <div class="dashboard-card h-100">
-                <h2 class="h5 mb-3">Performance Insights</h2>
+            <div class="dashboard-card image-insight-card">
+              <img src="assets/measurement.webp" alt="Performance measurement">
+              <div>
+                <h2 class="h5">Performance Insights</h2>
                 <ul class="mb-0 ps-3">
-                  <li>Technology sector outperformed expectations this quarter.</li>
-                  <li>Diversification into emerging markets provided strong returns.</li>
-                  <li>Fixed income portfolio maintained stability during market fluctuations.</li>
+                  <li>Technology and healthcare led quarterly gains.</li>
+                  <li>Emerging markets improved diversification.</li>
+                  <li>Fixed income reduced downside movement.</li>
                 </ul>
               </div>
             </div>
           </section>
         </section>
 
-        
-
         <section class="dashboard-panel" data-dashboard-panel="leads" hidden>
-          <section class="row g-4 mb-4">
-            <div class="col-sm-4"><div class="dashboard-card"><p class="muted mb-1">Deposits</p><h2>$50,000</h2></div></div>
-            <div class="col-sm-4"><div class="dashboard-card"><p class="muted mb-1">Withdrawals</p><h2>$15,000</h2></div></div>
-            <div class="col-sm-4"><div class="dashboard-card"><p class="muted mb-1">Trades Executed</p><h2>250</h2></div></div>
+          <section class="dashboard-metric-grid dashboard-three">
+            <div class="dashboard-card metric-card"><span>Deposits</span><strong>$50,000</strong></div>
+            <div class="dashboard-card metric-card"><span>Withdrawals</span><strong>$15,000</strong></div>
+            <div class="dashboard-card metric-card"><span>Trades Executed</span><strong>250</strong></div>
           </section>
-
           <div class="dashboard-card">
             <h2 class="h5 mb-3">Recent Transactions</h2>
             <div class="table-responsive">
               <table class="table align-middle">
-                <thead>
-                  <tr>
-                    <th>Date</th>
-                    <th>Description</th>
-                    <th>Amount</th>
-                  </tr>
-                </thead>
+                <thead><tr><th>Date</th><th>Description</th><th>Amount</th></tr></thead>
                 <tbody>
                   <tr><td>2024-07-15</td><td>Buy 100 shares AAPL</td><td>-$18,000</td></tr>
                   <tr><td>2024-07-14</td><td>Sell 50 shares TSLA</td><td>+$9,500</td></tr>
@@ -138,50 +171,18 @@
           </div>
         </section>
 
-        <section class="dashboard-panel" data-dashboard-panel="clients" hidden>
-          <section class="row g-4 mb-4">
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Managed Accounts</p><h2>128</h2></div></div>
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Client Satisfaction</p><h2>98%</h2></div></div>
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Avg. Portfolio Size</p><h2>$1.2M</h2></div></div>
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">New Clients (Q)</p><h2>15</h2></div></div>
-          </section>
-
-          <div class="dashboard-card">
-            <h2 class="h5 mb-3">Managed Accounts Overview</h2>
-            <div class="table-responsive">
-              <table class="table align-middle">
-                <thead>
-                  <tr>
-                    <th>Account Holder</th>
-                    <th>Portfolio Type</th>
-                    <th>Advisor</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Priya Sharma</td><td>Growth Equity</td><td>Anya Sharma</td><td><span class="badge text-bg-success">Active</span></td></tr>
-                  <tr><td>James Carter</td><td>Retirement Income</td><td>David Chen</td><td><span class="badge text-bg-warning">Review Needed</span></td></tr>
-                  <tr><td>Aisha Khan</td><td>Diversified Global</td><td>Maria Rodriguez</td><td><span class="badge text-bg-success">Active</span></td></tr>
-                  <tr><td>Menon Estates</td><td>Family Trust</td><td>Anya Sharma</td><td><span class="badge text-bg-info">Onboarding</span></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
-
         <section class="dashboard-panel" data-dashboard-panel="reports" hidden>
-          <section class="row g-4 mb-4">
-            <div class="col-md-4"><div class="dashboard-card"><p class="muted mb-1">Performance Statements</p><h2>18</h2></div></div>
-            <div class="col-md-4"><div class="dashboard-card"><p class="muted mb-1">Tax Documents</p><h2>7</h2></div></div>
-            <div class="col-md-4"><div class="dashboard-card"><p class="muted mb-1">Custom Reports</p><h2>39</h2></div></div>
+          <section class="dashboard-metric-grid dashboard-three">
+            <div class="dashboard-card metric-card"><span>Performance Statements</span><strong>18</strong></div>
+            <div class="dashboard-card metric-card"><span>Tax Documents</span><strong>7</strong></div>
+            <div class="dashboard-card metric-card"><span>Custom Reports</span><strong>39</strong></div>
           </section>
-
           <div class="dashboard-card">
             <h2 class="h5 mb-3">Document Center</h2>
-            <div class="row g-3">
-              <div class="col-md-4"><div class="p-3 rounded-4 border h-100"><strong>Quarterly Statements</strong><p class="mb-0 muted">Detailed breakdown of portfolio performance and holdings.</p></div></div>
-              <div class="col-md-4"><div class="p-3 rounded-4 border h-100"><strong>Annual Tax Summaries</strong><p class="mb-0 muted">Consolidated reports for tax filing purposes.</p></div></div>
-              <div class="col-md-4"><div class="p-3 rounded-4 border h-100"><strong>Investment Policy Statements</strong><p class="mb-0 muted">Your personalized investment guidelines and objectives.</p></div></div>
+            <div class="dashboard-document-grid">
+              <div><i class="bi bi-file-earmark-bar-graph"></i><strong>Quarterly Statements</strong><p class="muted mb-0">Portfolio performance and holdings.</p></div>
+              <div><i class="bi bi-receipt"></i><strong>Annual Tax Summaries</strong><p class="muted mb-0">Consolidated tax filing reports.</p></div>
+              <div><i class="bi bi-journal-check"></i><strong>Policy Statements</strong><p class="muted mb-0">Your investment guidelines.</p></div>
             </div>
           </div>
         </section>
@@ -203,20 +204,11 @@
                 <input id="themeAccentColor" class="form-control" type="color" value="#1a4d2e">
               </div>
               <div class="col-12">
-                <div class="form-check mb-2">
-                  <input class="form-check-input" type="checkbox" id="emailAlerts" checked>
-                  <label class="form-check-label" for="emailAlerts">Receive market news and alerts</label>
-                </div>
-                <div class="form-check mb-2">
-                  <input class="form-check-input" type="checkbox" id="weeklySummary" checked>
-                  <label class="form-check-label" for="weeklySummary">Deliver weekly portfolio summaries</label>
-                </div>
-                <div class="form-check">
-                  <input class="form-check-input" type="checkbox" id="securityAlerts">
-                  <label class="form-check-label" for="securityAlerts">Notify on unusual account activity</label>
-                </div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="emailAlerts" checked><label class="form-check-label" for="emailAlerts">Receive market news and alerts</label></div>
+                <div class="form-check mb-2"><input class="form-check-input" type="checkbox" id="weeklySummary" checked><label class="form-check-label" for="weeklySummary">Deliver weekly portfolio summaries</label></div>
+                <div class="form-check"><input class="form-check-input" type="checkbox" id="securityAlerts"><label class="form-check-label" for="securityAlerts">Notify on unusual account activity</label></div>
               </div>
-              <div class="col-12 d-flex gap-2">
+              <div class="col-12 d-flex flex-wrap gap-2">
                 <button type="button" class="btn btn-primary">Save Settings</button>
                 <button type="button" class="btn btn-outline-primary">Reset</button>
               </div>
@@ -225,30 +217,28 @@
         </section>
 
         <section class="dashboard-panel" data-dashboard-panel="profile" hidden id="profile">
-          <div class="row g-4">
-            <div class="col-lg-5">
-              <div class="dashboard-card h-100">
-                <h2 class="h5 mb-3">User Profile</h2>
-                <p class="mb-2"><strong>Name:</strong> <span data-user-name></span></p>
-                <p class="mb-2"><strong>Email:</strong> <span data-user-email></span></p>
-                <p class="mb-2"><strong>Role:</strong> <span data-user-role></span></p>
+          <div class="dashboard-content-grid dashboard-two-column">
+            <div class="dashboard-card image-insight-card">
+              <img src="assets/Sana.webp" alt="Investor profile portrait">
+              <div>
+                <h2 class="h5">User Profile</h2>
+                <p><strong>Name:</strong> <span data-user-name></span></p>
+                <p><strong>Email:</strong> <span data-user-email></span></p>
+                <p><strong>Role:</strong> <span data-user-role></span></p>
                 <p class="mb-0"><strong>Joined:</strong> <span data-user-joined></span></p>
               </div>
             </div>
-            <div class="col-lg-7">
-              <div class="dashboard-card h-100">
-                <h2 class="h5 mb-3">Profile Activity</h2>
-                <ul class="mb-0 ps-3">
-                  <li>Completed onboarding checklist</li>
-                  <li>Reviewed 4 campaign dashboards today</li>
-                  <li>Exported the latest client report</li>
-                </ul>
-              </div>
+            <div class="dashboard-card">
+              <h2 class="h5 mb-3">Profile Activity</h2>
+              <ul class="mb-0 ps-3">
+                <li>Completed onboarding checklist</li>
+                <li>Reviewed the latest allocation report</li>
+                <li>Exported the newest statement package</li>
+              </ul>
             </div>
           </div>
         </section>
       </div>
-
     </main>
   </div>
 

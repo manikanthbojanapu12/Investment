@@ -6,11 +6,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initLogout();
   initDashboardNavigation();
   initSettingsPanel();
-  window.addEventListener("resize", debounce(() => {
-    if (getActivePanelName() === "dashboard") {
-      drawCharts();
-    }
-  }, 150));
+  window.addEventListener("resize", debounce(drawCharts, 150));
 });
 
 function requireSession() {
@@ -67,9 +63,7 @@ function initDashboardNavigation() {
       link.classList.toggle("active", isActive);
     });
 
-    if (panelName === "dashboard") {
-      drawCharts();
-    }
+    window.requestAnimationFrame(drawCharts);
   };
 
   links.forEach((link) => {
@@ -126,8 +120,10 @@ function setupCanvas(id) {
   if (!canvas) return null;
   const parent = canvas.parentElement;
   const rect = parent.getBoundingClientRect();
-  canvas.width = rect.width;
-  canvas.height = rect.height || 280;
+  const width = Math.max(Math.floor(rect.width), 260);
+  const height = Math.max(Math.floor(rect.height), 220);
+  canvas.width = width;
+  canvas.height = height;
   return { canvas, ctx: canvas.getContext("2d"), width: canvas.width, height: canvas.height };
 }
 

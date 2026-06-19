@@ -88,27 +88,27 @@
               <div class="row g-3">
                 <div class="col-md-6">
                   <label for="fullName" class="form-label">Full Name</label>
-                  <input class="form-control" id="fullName" type="text" placeholder="Enter your full name" data-letters-only="true">
+                  <input class="form-control" id="fullName" type="text" placeholder="Enter your full name" data-letters-only="true" required>
                   <div class="error-message" data-error-for="fullName"></div>
                 </div>
                 <div class="col-md-6">
                   <label for="email" class="form-label">Email</label>
-                  <input class="form-control" id="email" type="email" inputmode="email" autocomplete="email" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Enter a valid email address" placeholder="name@example.com">
+                  <input class="form-control" id="email" type="email" inputmode="email" autocomplete="email" pattern="[^\s@]+@[^\s@]+\.[^\s@]+" title="Enter a valid email address" placeholder="name@example.com" required>
                   <div class="error-message" data-error-for="email"></div>
                 </div>
                 <div class="col-md-6">
                   <label for="phone" class="form-label">Phone Number</label>
-                  <input class="form-control" id="phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9]{10,15}" title="Enter 10 to 15 digits only" maxlength="15" placeholder="2125550188">
+                  <input class="form-control" id="phone" type="tel" inputmode="numeric" autocomplete="tel" pattern="[0-9]{10,15}" title="Enter 10 to 15 digits only" maxlength="10" placeholder="987 556 7654" required>
                   <div class="error-message" data-error-for="phone"></div>
                 </div>
                 <div class="col-md-6">
                   <label for="subject" class="form-label">Subject</label>
-                  <input class="form-control" id="subject" type="text" placeholder="Investment Inquiry">
+                  <input class="form-control" id="subject" type="text" placeholder="Investment Inquiry" required>
                   <div class="error-message" data-error-for="subject"></div>
                 </div>
                 <div class="col-12">
                   <label for="message" class="form-label">Message</label>
-                  <textarea class="form-control" id="message" rows="5" placeholder="Share a few details about your goals, timeline, and budget."></textarea>
+                  <textarea class="form-control" id="message" rows="5" minlength="10" placeholder="Share a few details about your goals, timeline, and budget." required></textarea>
                   <div class="error-message" data-error-for="message"></div>
                 </div>
                 <div class="col-12">
@@ -120,19 +120,14 @@
           <div class="col-lg-5 reveal">
             <div class="glass-card p-4 h-100">
               <h2 class="h4">Agency Details</h2>
-              <p><i class="bi bi-geo-alt text-primary"></i><a href="404.html">Stackly Avenue, Salem, Tamil Nadu</a></p>
-              <p><i class="bi bi-envelope text-primary"></i><a href="404.html">hello@stackly.example</a></p>
+              <p><i class="bi bi-geo-alt text-primary"></i><a href="404.html"> Stackly Avenue, Salem, Tamil Nadu</a></p>
+              <p><i class="bi bi-envelope text-primary"></i><a href="404.html"> hello@stackly.example</a></p>
               <p><i class="bi bi-telephone text-primary"></i>+91 984 555 0108</p>
               <hr>
               <h3 class="h5">What to expect</h3>
               <p class="muted">We will confirm your request, review your current setup, and suggest the best next step for your team.</p>
-              <div class="d-flex gap-2 mt-4">
-                <a class="social-link" href="404.html" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                <a class="social-link" href="404.html" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                <a class="social-link" href="404.html" aria-label="LinkedIn"><i class="bi bi-linkedin"></i></a>
-                <a class="social-link" href="404.html" aria-label="X"><i class="bi bi-twitter-x"></i></a>
-              </div>
-              <iframe title="Stackly office map" class="w-100 rounded-4 border-0 mt-4" height="260" loading="lazy" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3900.8563447532534!2d78.1439317!3d11.4667!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3babf39a2e2e2e2d%3A0x1234567890abcdef!2sStackly%20Salem%2C%20Tamil%20Nadu!5e0!3m2!1sen!2sin!4v1234567890"></iframe>
+              
+              <iframe title="Stackly office map" class="w-100 rounded-4 border-0 mt-4" height="260" loading="lazy" src="https://www.google.com/maps?q=Stackly%20office%2C%20Salem%2C%20Tamil%20Nadu&output=embed"></iframe>
             </div>
           </div>
         </div>

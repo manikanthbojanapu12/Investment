@@ -16,6 +16,7 @@
       <div class="row justify-content-center">
         <div class="col-md-10 col-lg-8 col-xl-7 reveal">
           <form id="signupForm" class="auth-card auth-card-centered auth-card-signup-panel" novalidate>
+            <a class="auth-back-link" href="index.html"><i class="bi bi-arrow-left"></i> Back to Home</a>
             <h2 class="h2 fw-bold mb-2">Create Account</h2>
             <p class="muted mb-4">Begin your wealth management journey.</p>
             <div class="row g-3">
@@ -55,9 +56,8 @@
                 <label for="signupRole" class="form-label">Role</label>
                 <select class="form-select" id="signupRole">
                   <option value="">Select role</option>
-                  <option>Individual Investor</option>
-                  <option>Institutional Client</option>
-                  <option>Financial Advisor</option>
+                  <option>Admin</option>
+                  
                   <option>Client</option>
                 </select>
                 <div class="error-message" data-error-for="signupRole"></div>
@@ -74,7 +74,6 @@
               </div>
               <div class="col-12 text-center">
                 <a class="text-primary" href="login.html">Already have an account? Login</a>
-                <p class="mt-2 mb-0"><a class="text-primary" href="index.html">Back to Home</a></p>
               </div>
             </div>
           </form>

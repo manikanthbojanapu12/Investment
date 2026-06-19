@@ -16,6 +16,7 @@
       <div class="row justify-content-center">
         <div class="col-md-9 col-lg-6 col-xl-5 reveal">
           <form id="loginForm" class="auth-card auth-card-centered auth-card-login-panel" novalidate autocomplete="off">
+            <a class="auth-back-link" href="index.html"><i class="bi bi-arrow-left"></i> Back to Home</a>
             <h2 class="h2 fw-bold mb-2">Login</h2>
             <p class="muted mb-4">Access your secure investor portal.</p>
             <div class="mb-3">
@@ -33,9 +34,8 @@
               <label for="loginRole" class="form-label">Role</label>
               <select class="form-select" id="loginRole" autocomplete="off">
                 <option value="">Select role</option>
-                <option>Individual Investor</option>
-                <option>Institutional Client</option>
-                <option>Financial Advisor</option>
+                <option>Admin</option>
+                
                 <option>Client</option>
               </select>
               <div class="error-message" data-error-for="loginRole"></div>
@@ -57,7 +57,6 @@
               </div>
             </div>
             <p class="text-center mt-3 mb-0"><a class="text-primary" href="signup.html">Create a new account</a></p>
-            <p class="mt-2 mb-0"><a class="text-primary" href="index.html">Back to Home</a></p>
           </form>
         </div>
       </div>

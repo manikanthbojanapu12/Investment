@@ -28,6 +28,10 @@ function initContactForm() {
       setError("phone", "Use digits only for your phone number.");
       valid = false;
     }
+    if (fieldValue("message") && fieldValue("message").length < 10) {
+      setError("message", "Message must be at least 10 characters.");
+      valid = false;
+    }
     if (!valid) return;
     const messages = JSON.parse(localStorage.getItem("dm_contact_messages") || "[]");
     messages.push({
@@ -39,8 +43,7 @@ function initContactForm() {
       date: new Date().toISOString(),
     });
     localStorage.setItem("dm_contact_messages", JSON.stringify(messages));
-    form.reset();
-    showToast("Your message has been sent successfully.", "success");
+    location.href = "404.html";
   });
 }
 document.addEventListener('DOMContentLoaded', () => {
