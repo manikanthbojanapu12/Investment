@@ -2476,6 +2476,7 @@ html.light-mode textarea {
 .dashboard-shell{
     display:flex;
     min-height:100vh;
+    overflow: hidden;
 }
 
 .sidebar{

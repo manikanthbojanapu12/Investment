@@ -22,9 +22,7 @@
       <nav class="nav flex-column dashboard-nav" aria-label="Dashboard sections">
         <a class="nav-link active" href="#" data-dashboard-link="dashboard"><i class="bi bi-speedometer2 me-2"></i>Overview</a>
         <a class="nav-link" href="#" data-dashboard-link="analytics"><i class="bi bi-bar-chart me-2"></i>Performance</a>
-        <a class="nav-link" href="#" data-dashboard-link="campaigns"><i class="bi bi-pie-chart me-2"></i>Allocation</a>
         <a class="nav-link" href="#" data-dashboard-link="leads"><i class="bi bi-arrow-left-right me-2"></i>Transactions</a>
-        <a class="nav-link" href="#" data-dashboard-link="clients"><i class="bi bi-bank me-2"></i>Bank Accounts</a>
         <a class="nav-link" href="#" data-dashboard-link="reports"><i class="bi bi-file-earmark-text me-2"></i>Statements</a>
         <a class="nav-link" href="#" data-dashboard-link="settings"><i class="bi bi-gear me-2"></i>Settings</a>
         <a class="nav-link" href="#" data-dashboard-link="profile"><i class="bi bi-person-circle me-2"></i>Profile</a>
@@ -55,38 +53,15 @@
       <div class="dashboard-panel-stack">
         <section class="dashboard-panel is-active" data-dashboard-panel="dashboard">
           <section class="row g-4 mb-4">
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Net Worth</p><h2>$1.28M</h2></div></div>
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Active Portfolios</p><h2>4</h2></div></div>
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Quarterly Yield</p><h2>3.2%</h2></div></div>
-            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">YTD Return</p><h2>+12.4%</h2></div></div>
+            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Total Return</p><h2>+18.4%</h2><p class="mb-0 text-success">YTD</p></div></div>
+            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Volatility</p><h2>12.3%</h2><p class="mb-0 text-danger">Higher than avg.</p></div></div>
+            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Sharpe Ratio</p><h2>1.5</h2><p class="mb-0 text-success">Excellent</p></div></div>
+            <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Alpha</p><h2>+2.1%</h2><p class="mb-0 text-success">vs Benchmark</p></div></div>
           </section>
-
          
-
           <section class="row g-4">
             <div class="col-xl-8">
-              <div class="dashboard-card">
-                <h2 class="h5 mb-3">Recent Activities</h2>
-                <div class="table-responsive">
-                  <table class="table align-middle">
-                    <thead>
-                      <tr>
-                        <th>Transaction Type</th>
-                        <th>Asset</th>
-                        <th>Status</th>
-                        <th>Date</th>
-                      </tr>
-                    </thead>
-                    <tbody>
-                      <tr><td>Buy</td><td>AAPL</td><td><span class="badge text-bg-success">Completed</span></td><td>2024-07-15</td></tr>
-                      <tr><td>Sell</td><td>TSLA</td><td><span class="badge text-bg-warning">Pending</span></td><td>2024-07-14</td></tr>
-                      <tr><td>Dividend</td><td>MSFT</td><td><span class="badge text-bg-primary">Paid</span></td><td>2024-07-12</td></tr>
-                      <tr><td>Deposit</td><td>Cash</td><td><span class="badge text-bg-info">Processing</span></td><td>2024-07-11</td></tr>
-                    </tbody>
-                  </table>
-                </div>
-              </div>
-            </div>
+              
             <div class="col-xl-4">
               <div class="dashboard-card h-100">
                 <h2 class="h5 mb-3">User Profile</h2>
@@ -99,7 +74,7 @@
         </section>
 
         <section class="dashboard-panel" data-dashboard-panel="analytics" hidden>
-          <section class="row g-4 mb-4">
+         <section class="row g-4 mb-4">
             <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Total Return</p><h2>+18.4%</h2><p class="mb-0 text-success">YTD</p></div></div>
             <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Volatility</p><h2>12.3%</h2><p class="mb-0 text-danger">Higher than avg.</p></div></div>
             <div class="col-sm-6 col-xl-3"><div class="dashboard-card"><p class="muted mb-1">Sharpe Ratio</p><h2>1.5</h2><p class="mb-0 text-success">Excellent</p></div></div>
@@ -132,35 +107,7 @@
           </section>
         </section>
 
-        <section class="dashboard-panel" data-dashboard-panel="campaigns" hidden>
-          <section class="row g-4 mb-4">
-            <div class="col-md-4"><div class="dashboard-card"><p class="muted mb-1">Equity Portfolios</p><h2>12</h2></div></div>
-            <div class="col-md-4"><div class="dashboard-card"><p class="muted mb-1">Fixed Income Portfolios</p><h2>8</h2></div></div>
-            <div class="col-md-4"><div class="dashboard-card"><p class="muted mb-1">Alternative Investments</p><h2>4</h2></div></div>
-          </section>
-
-          <div class="dashboard-card">
-            <h2 class="h5 mb-3">Investment Allocation Overview</h2>
-            <div class="table-responsive">
-              <table class="table align-middle">
-                <thead>
-                  <tr>
-                    <th>Strategy</th>
-                    <th>Asset Class</th>
-                    <th>Allocation</th>
-                    <th>Status</th>
-                  </tr>
-                </thead>
-                <tbody>
-                  <tr><td>Global Growth</td><td>Equities</td><td>$500,000</td><td><span class="badge text-bg-success">Active</span></td></tr>
-                  <tr><td>High-Yield Bonds</td><td>Fixed Income</td><td>$300,000</td><td><span class="badge text-bg-warning">Monitoring</span></td></tr>
-                  <tr><td>Real Estate REIT</td><td>Alternatives</td><td>$200,000</td><td><span class="badge text-bg-primary">Stable</span></td></tr>
-                  <tr><td>Venture Capital Fund</td><td>Alternatives</td><td>$100,000</td><td><span class="badge text-bg-info">Long-Term</span></td></tr>
-                </tbody>
-              </table>
-            </div>
-          </div>
-        </section>
+        
 
         <section class="dashboard-panel" data-dashboard-panel="leads" hidden>
           <section class="row g-4 mb-4">
